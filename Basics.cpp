@@ -486,7 +486,7 @@ int main()
 
 //#include <iostream>
 //using namespace std;
-//
+
 //class Student {
 //private:
 //    string name;
@@ -523,5 +523,43 @@ int main()
 //    cout << "Name: " << s1.getName() << endl;
 //    cout << "Roll: " << s1.getRoll() << endl;
 //
+//    return 0;
+//}
+
+//Example of inheritance
+
+//#include <iostream>
+//using namespace std;
+//
+//class vehicle {
+//public:
+//    string color;
+//    string purpose;
+//
+//    vehicle(string c, string p) {
+//        color = c;
+//        purpose = p;
+//    }
+//};
+//
+//class car : public vehicle {
+//public:
+//    int wheel;
+//
+//    // Constructor calls base class constructor using initializer list
+//    car(string c, string p, int w) : vehicle(c, p) {
+//        wheel = w;
+//    }
+//
+//    void showdetails() {
+//        cout << "Color: " << color << endl;
+//        cout << "Purpose: " << purpose << endl;
+//        cout << "Wheels: " << wheel << endl;
+//    }
+//};
+//
+//int main() {
+//    car c("Red", "Move", 4);  // Object creation
+//    c.showdetails();          // Correct function call
 //    return 0;
 //}
