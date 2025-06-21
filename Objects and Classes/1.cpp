@@ -11,9 +11,9 @@ private:
         cout<<"Enter Celsius degree"<<endl;
         cin>>cdegree;
     }
-    void toFarenheit()
+    float toFarenheit()
     {
-        cout<<"The temperature in Farenheit is : "<<(cdegree*1.8+32)<<endl;
+        return cdegree*1.8+32;
     }
 
 };
@@ -27,9 +27,9 @@ private:
         cout<<"Enter Farenheit degree"<<endl;
         cin>>fdegree;
     }
-    void toCelsius()
+    float toCelsius()
     {
-        cout<<"The temperature in Celsius is : "<<((fdegree-32)/1.8)<<endl;
+        return ((fdegree-32)/1.8);
     }
 
 };
@@ -39,7 +39,7 @@ int main()
     farenheit fd;
     cd.celsiusset();
     fd.farenheitset();
-    cd.toFarenheit();
-    fd.toCelsius();
+    cout<<"Temperature in farenheit scale: "<<cd.toFarenheit()<<endl;
+    cout<<"Temperature in celsius scale : "<<fd.toCelsius()<<endl;
 
 }
