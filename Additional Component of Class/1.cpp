@@ -20,18 +20,33 @@ public:
         this->second=second;
     }
 
+
+
     Time add(Time t)
     {
        Time result;
         result.second = second + t.second;
-        result.minute = minute + t.minute + result.second / 60;
-        result.second %= 60;
-
-        result.hour = hour + t.hour + result.minute / 60;
-        result.minute %= 60;
-
-        result.hour %= 24;
+        result.minute = minute + t.minute;
+        result.hour = hour + t.hour;
+        result.convert();
         return result;
+    }
+    void convert()
+    {
+        if(second>60)
+        {
+            minute = minute + second/60;
+            second%=60;
+        }
+        if(minute>60)
+        {
+             hour = hour + minute/60;
+            minute%=60;
+        }
+         if(hour>24)
+        {
+            hour%=24;
+        }
     }
     void display24()
     {
