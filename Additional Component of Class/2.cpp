@@ -12,7 +12,7 @@ public:
         this->a= new char[50];
         strcpy(this->a,a);
     }
-    void stringconcat(const arr &char2)
+    void join(const arr &char2)
     {
         int i,l;
         for(i=0,l=strlen(a);i<(strlen(a)+strlen(char2.a));i++,l++)
@@ -38,6 +38,6 @@ int main()
 {
     arr char1("Engineers are");
     arr char2(" creatures of Logic");
-    char1.stringconcat(char2);
+    char1.join(char2);
     char1.display();
 }
