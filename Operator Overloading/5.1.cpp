@@ -36,7 +36,7 @@ public:
 };
 class C{
 public:
-    showdata(A obj)
+    void showdata(A obj)
     {
         cout<<"X of class A= "<<obj.x<<" Y of class B= "<<obj.y<<endl;
     }

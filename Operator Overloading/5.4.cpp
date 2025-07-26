@@ -16,7 +16,7 @@ public:
         cout << day << "/" << month << "/" << year << endl;
     }
 
-    bool LeapYear(int y) {
+    bool LeapYear() {
         if(y%400==0 || (y%4==0 &&y%100!=0))
            {
                return true;
@@ -26,7 +26,7 @@ public:
            }
     }
 
-    int noofdays(int m, int y){
+    int noofdays(){
         if (m == 2) {
             return LeapYear(y) ? 29 : 28;
         }
